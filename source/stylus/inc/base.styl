@@ -1,0 +1,124 @@
+$rootFontSize = 16px
+
+html
+	height 100%
+
+body
+	font-family sans-serif
+	min-height 100%
+	position relative
+	font-size $rootFontSize
+	-webkit-text-size-adjust 100%
+	-webkit-font-size-adjust 100%
+	@media (max-width 992px)
+		width 992px
+
+footer
+	position absolute
+	width 100%
+	bottom 0
+	left 0
+	height 100px
+
+img
+	display block
+
+h1, h2, h3, h4, h5
+	color #000
+	line-height 18px
+	font-weight 600
+	margin-bottom 10px
+	
+h1
+	font-size 25px
+h2
+	font-size 22px
+h3
+	font-size 20px
+h4
+	font-size 18px
+h5
+	font-size 17px
+
+p
+	margin-bottom 20px
+	line-height 20px
+	
+ul, ol
+	margin-bottom 20px
+	li
+		margin-bottom 10px
+
+ul
+	list-style none
+
+i
+	font-style italic
+
+b, strong
+	font-weight 600
+			
+button
+	border 0
+
+a
+	cursor pointer
+	
+.-no-border, _no-border *
+	border 0
+
+.-img-left,
+.-img-right
+	margin-bottom 14px
+
+.-img-left
+	float left
+	margin-right 14px
+
+.-img-right
+	float right
+	margin-left 14px
+
+.-text-center
+	text-align center
+
+.-middle-out
+	font-size 0
+	height 100%
+	&:before
+		content ''
+		height 100%
+		display inline-block
+		vertical-align middle
+
+.-middle-in
+	display inline-block
+	vertical-align middle
+	font-size $rootFontSize
+
+.b-common-wrap
+	padding-bottom 100px
+	
+.b-container
+	min-width 992px
+	max-width 1400px
+	width 100%
+	margin 0 auto
+
+.-hidden-desktop
+	display none !important
+	@media $max_xs
+		display block !important
+
+.-hidden-mobile
+	@media $max_xs
+		display none !important
+
+.fancybox-wrap,
+.fancybox-wrap *
+	-webkit-box-sizing content-box
+	-moz-box-sizing content-box
+	box-sizing content-box
+
+.owl-carousel .owl-item
+	-webkit-transform translateZ(0)

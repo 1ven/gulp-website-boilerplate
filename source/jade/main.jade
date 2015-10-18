@@ -1,0 +1,19 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+	head
+		title main
+		include inc/head
+	body(class="p-main")
+		include partials/header
+		
+		.b-common-wrap
+
+		include partials/footer
+		include inc/vendor-scripts
+		script(src="js/client.min.js")
