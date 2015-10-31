@@ -6,7 +6,7 @@
 
   gulp.task('watch', function() {
     gulp.watch(['source/jade/*', 'source/jade/**/*.jade'], ['jade']);
-    gulp.watch(['source/stylus/*', 'source/stylus/**/*', 'source/pages/**/*.styl'], ['stylus']);
+    gulp.watch(['source/stylus/*', 'source/stylus/**/*', '!source/stylus/inc/sprite.styl'], ['stylus']);
     gulp.watch(['source/images/*.png', 'source/images/**/*.png', 'source/scripts/*.js', 'source/fonts/*.woff', '!source/images/sprite/', '!source/images/sprite/*'], ['copy']);
     gulp.watch(['source/images/*.jpg', 'source/images/**/*.jpg', '!source/images/sprite/', '!source/images/sprite/*'], ['imagemin']);
     gulp.watch(['source/images/sprite/*.png'], ['sprite']);
