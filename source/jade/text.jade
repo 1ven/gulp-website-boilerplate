@@ -1,0 +1,63 @@
+include helpers/bemto
+include helpers/variables
+include helpers/mixins
+
+-bemto_settings_prefix = 'b-'
+
+doctype html
+html
+    head
+        title name
+        include inc/head
+    body(class="p-name")
+        include partials/header
+        
+        .b-common-wrap
+            +b('section').section
+                p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis suscipit quis optio quo perferendis quibusdam, hic quidem sed voluptate recusandae fuga harum sint ad nobis veniam minus, voluptas molestias vitae!
+                img(src="http://placehold.it/200x100", alt="")._img-left
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam similique vitae perferendis natus quidem obcaecati quasi quas animi ex iusto impedit numquam dolores a blanditiis, quod fugiat debitis dolorum, atque! Reprehenderit, inventore incidunt neque magnam adipisci vitae, a possimus ab ex optio similique et impedit cupiditate corporis sequi ratione harum delectus error dolor officiis! Qui odit nihil cum. Officia esse ipsa ut rem, officiis. Veritatis non atque unde, corporis aut tenetur harum omnis. Ducimus quis excepturi nam debitis atque unde dolore rem in voluptate, nemo! Obcaecati facilis est corrupti perspiciatis nostrum, dolor, quas cupiditate, beatae necessitatibus consequatur dolores quidem perferendis!
+                img(src="http://placehold.it/200x100", alt="")._img-right
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam expedita id temporibus aperiam facere corporis voluptate, adipisci placeat laboriosam, reiciendis optio velit mollitia itaque sit. Laboriosam, molestias, saepe. Obcaecati, mollitia.
+                table
+                    tr
+                        th Параметр
+                        th Параметр
+                        th Параметр
+                        th Параметр
+                    tr
+                        td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vitae!
+                        td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vitae!
+                        td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vitae!
+                        td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vitae!
+                    tr
+                        td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vitae!
+                        td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vitae!
+                        td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vitae!
+                        td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vitae!
+                    tr
+                        td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vitae!
+                        td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vitae!
+                        td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vitae!
+                        td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, vitae!
+                h1 Заголовок 1
+                h2 Заголовок 2
+                h3 Заголовок 3
+                h4 Заголовок 4
+                h5 Заголовок 5
+                ul
+                    li Список
+                    li Список
+                    li Список
+                    li Список
+                    li Список
+                ol
+                    li Нумерованный список
+                    li Нумерованный список
+                    li Нумерованный список
+                    li Нумерованный список
+                    li Нумерованный список
+
+        include partials/footer
+        include inc/vendor-scripts
+        script(src="js/client.min.js")
