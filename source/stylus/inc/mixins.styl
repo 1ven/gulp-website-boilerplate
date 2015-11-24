@@ -1,4 +1,4 @@
-$rootFontVal = 16
+$rootFontVal = 15
 $rootFontSize = $rootFontVal px
 
 $max_xs = '(max-width 768px)'
@@ -9,6 +9,17 @@ $max_lg = '(max-width 1500px)'
 $min_sm = '(min-width 769px)'
 $min_md = '(min-width 993px)'
 $min_lg = '(min-width 1201px)'
+
+font-size(value)
+    font-size value px
+    font-size (value / $rootFontVal) rem
+
+lineHeight(value)
+    line-height (value / $rootFontVal)
+
+toRem(prop, value)
+    {prop} value px
+    {prop} (value / $rootFontVal) rem
 
 tr(type, time)
     transition type time ease-in-out
@@ -86,18 +97,18 @@ sprite($sprite)
     spriteWidth($sprite)
     spriteHeight($sprite)
 
-middle-v-out()
+v-out(align = middle)
     font-size 0
     &:before
         content ''
         height 100%
         display inline-block
-        vertical-align middle
+        vertical-align align
 
-middle-v-in()
+v-in(align = middle)
     font-size $rootFontSize
     display inline-block
-    vertical-align middle
+    vertical-align align
     width 100%
 
 .im-popup
@@ -180,13 +191,20 @@ owlNav(prevIcon, nextIcon, padding)
     .owl-stage-outer
         z-index 2
 
-fontSize(value)
-    font-size value px
-    font-size (value / rootFontVal) rem
 
-lineHeight(value)
-    line-height (value / rootFontVal)
+item(prop, value)
+    {prop} value
+    &:last-child
+        {prop} 0
 
-toRem(prop, value)
-    {prop} value px
-    {prop} (value / rootFontVal) rem
+colsWrap(cols, xOffset, yOffset)
+    overflow hidden
+    &__cols-wrap
+        margin (-(yOffset/2))px (-(xOffset/2))px
+        font-size 0
+    &__col
+        font-size $rootFontSize
+        display inline-block
+        vertical-align top
+        padding (yOffset/2)px (xOffset/2)px
+        width (100/cols)%
