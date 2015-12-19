@@ -1,14 +1,14 @@
 html
 	height 100%
+	font-size $rootFontSize, false
 
 body
 	font-family sans-serif
 	min-height 100%
 	position relative
-	font-size $rootFontSize
 	-webkit-text-size-adjust 100%
 	-webkit-font-size-adjust 100%
-	@media (max-width 992px)
+	@media $max_sm
 		width 992px
 
 footer
