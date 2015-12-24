@@ -3,6 +3,7 @@ var order = require('gulp-order');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
+var babel = require('gulp-babel');
 
 gulp.task('javascript', function() {
     gulp.src([
@@ -17,6 +18,9 @@ gulp.task('javascript', function() {
         }))
         .pipe(gulp.dest('build/js'));
     gulp.src('source/scripts/client.js')
+        .pipe(babel({
+            presets: ['es2015']
+        }))
         .pipe(uglify({
             mangle: {
                 toplevel: true
