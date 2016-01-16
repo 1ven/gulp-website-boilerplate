@@ -31,5 +31,8 @@
     "gulp-util": "~3.0.1",
     "gulp.spritesmith": "^2.5.0",
     "require-dir": "^0.1.0"
+  },
+  "dependencies": {
+    "normalize.css": "^3.0.3"
   }
 }

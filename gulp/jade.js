@@ -5,7 +5,7 @@ var plumber = require('gulp-plumber');
 var changed = require('gulp-changed');
 
 gulp.task('jade', function() {
-  return gulp.src('source/jade/*.jade')
+  return gulp.src(['source/jade/*.jade', '!source/jade/_template.jade'])
     .pipe(plumber())
     .pipe(changed('build', {extension: '.html'}))
     .pipe(

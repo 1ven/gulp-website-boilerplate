@@ -9,11 +9,11 @@ gulp.task('sprite', function() {
     cssFormat: 'stylus',
     padding: 5,
     algorithm: 'binary-tree',
-    cssTemplate: 'source/stylus/inc/stylus.template.mustache',
+    cssTemplate: 'source/stylus/sprite/stylus.template.mustache',
     cssVarMap: function(sprite) {
       sprite.name = "s-" + sprite.name;
     }
   }));
   spriteData.img.pipe(gulp.dest('build/img'));
-  return spriteData.css.pipe(gulp.dest('source/stylus/inc'));
+  return spriteData.css.pipe(gulp.dest('source/stylus/sprite'));
 });

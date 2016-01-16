@@ -8,9 +8,12 @@ var connect = require('gulp-connect');
 var plumber = require('gulp-plumber');
 
 gulp.task('stylus', function() {
-  return gulp.src('source/stylus/common.styl').pipe(stylus()).pipe(mmq({
+  gulp.src('source/stylus/common.styl')
+  .pipe(stylus())
+  .pipe(mmq({
     log: true
-  })).pipe(autoprefixer({
+  }))
+  .pipe(autoprefixer({
     browsers: '> 1%',
     cascade: false
   }))
