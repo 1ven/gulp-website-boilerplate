@@ -6,6 +6,7 @@ var order = require('gulp-order');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var minifyCss = require('gulp-minify-css');
+var plumber = require('gulp-plumber');
 
 gulp.task('bower', function() {
     var files = getPathsArray();
@@ -14,6 +15,7 @@ gulp.task('bower', function() {
         .pipe(
             order(getSortArray(files.js))
         )
+        .pipe(plumber())
         .pipe(concat('vendor.min.js'))
         .pipe(uglify({
             mangle: {

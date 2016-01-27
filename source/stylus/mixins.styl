@@ -1,6 +1,9 @@
 $rootFontVal = 16
 $rootFontSize = $rootFontVal px
 
+$orange = #f5b200
+$beige = #ead395
+
 $max_xs = '(max-width 768px)'
 $max_sm = '(max-width 992px)'
 $max_md = '(max-width 1200px)'
@@ -10,6 +13,7 @@ $min_sm = '(min-width 769px)'
 $min_md = '(min-width 993px)'
 $min_lg = '(min-width 1201px)'
 
+
 font-size(value, r = true)
     font-size value px
     if r
@@ -18,12 +22,58 @@ font-size(value, r = true)
 lineHeight(value)
     line-height (value / $rootFontVal)
 
+getRem(value)
+    if (value == 'auto')
+        return auto
+    return (value / $rootFontVal) rem
+
 toRem(prop, value)
     {prop} value px
     {prop} (value / $rootFontVal) rem
 
 tr(type, time)
     transition type time ease-in-out
+
+padding()
+    offset('padding', arguments)
+
+margin()
+    offset('margin', arguments)
+
+margin-bottom(value)
+    toRem('margin-bottom', value)
+
+offset(prop, args)
+
+    if (length(args) == 4)
+        top = args[0]
+        right = args[1]
+        bottom = args[2]
+        left = args[3]
+
+        {prop} top right bottom left
+        {prop} getRem(top) getRem(right) getRem(bottom) getRem(left)
+
+    if (length(args) == 3)
+        top = args[0]
+        x = args[1]
+        bottom = args[2]
+
+        {prop} top x bottom
+        {prop} getRem(top) getRem(x) getRem(bottom)
+
+    if (length(args) == 2)
+        y = args[0]
+        x = args[1]
+
+        {prop} y x
+        {prop} getRem(y) getRem(x)
+
+    if (length(args) == 1)
+        val = args[0]
+
+        {prop} val
+        {prop} getRem(val)
 
 selection(bg, color)
     ::selection

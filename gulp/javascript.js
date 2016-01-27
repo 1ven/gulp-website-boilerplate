@@ -5,7 +5,7 @@ var babel = require('gulp-babel');
 var plumber = require('gulp-plumber');
 
 gulp.task('javascript', function() {
-    gulp.src('source/scripts/client.js')
+    gulp.src(['source/scripts/client.js'])
         .pipe(plumber())
         .pipe(babel({
             presets: ['es2015']
@@ -14,9 +14,6 @@ gulp.task('javascript', function() {
             mangle: {
                 toplevel: true
             }
-        }))
-        .pipe(rename({
-            suffix: '.min'
         }))
         .pipe(gulp.dest('build/js'))
 });
