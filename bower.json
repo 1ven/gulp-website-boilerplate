@@ -15,6 +15,6 @@
   "dependencies": {
     "jquery": "~1.12.0",
     "normalize": "./source/stylus/vendor-css/normalize.css",
-    "helpers.min": "./source/scripts/vendor-js/helpers.min.js"
+    "js-helpers": "https://github.com/aivenreach/js-helpers.git"
   }
 }

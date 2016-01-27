@@ -2,9 +2,12 @@ module.exports = {
     "jquery": [
         "dist/jquery.js"
     ],
-    "normalize-css": [
-        "normalize.css"
+    "normalize": [
+        "index.css"
     ],
+    "js-helpers": [
+        "dist/js-helpers.min.js"
+    ]
     // "fancybox": [
     //     "source/jquery.fancybox.pack.js",
     //     "source/jquery.fancybox.css",

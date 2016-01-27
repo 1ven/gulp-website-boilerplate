@@ -15,5 +15,8 @@ gulp.task('javascript', function() {
                 toplevel: true
             }
         }))
+        .pipe(rename({
+            suffix: '.min'
+        }))
         .pipe(gulp.dest('build/js'))
 });
