@@ -33,7 +33,7 @@ gulp.task('bower', function() {
         .pipe(gulp.dest('build/css'));
 
     gulp.src(files.copy)
-        .pipe(gulp.dest('build/img'));
+        .pipe(gulp.dest('build/css'));
 });
 
 function getSortArray(arr) {

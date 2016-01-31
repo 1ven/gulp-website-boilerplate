@@ -15,7 +15,6 @@ gulp.task('watch', function() {
       'source/images/**/*.png',
       'source/images/*.jpg',
       'source/images/**/*.jpg',
-      'source/scripts/*.js',
       'source/fonts/*.woff',
       '!source/images/sprite/',
       '!source/images/sprite/*'
